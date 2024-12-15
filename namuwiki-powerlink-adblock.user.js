@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove powerlink advertise
 // @namespace    http://tampermonkey.net/
-// @version      202412150145
+// @version      202412150148
 // @description  Remove powerlink advertise
 // @author       hotswap
 // @match        https://namu.wiki/*
@@ -26,7 +26,7 @@
             while (parentDiv) {
                 const divStyle = window.getComputedStyle(parentDiv);
                 if (divStyle.borderRadius === '6px') {
-                    // parentDiv.style.display = 'none';
+                    parentDiv.style.display = 'none';
                     // Remove to get rid of leftovers
                     parentDiv.parentElement.remove();
                     break;
