@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove powerlink advertise
 // @namespace    http://tampermonkey.net/
-// @version      202412150128
+// @version      202412150139
 // @description  Remove powerlink advertise
 // @author       hotswap
 // @match        https://namu.wiki/*
@@ -18,7 +18,7 @@
 
         const adLabels = [
             ...[...document.querySelectorAll('span')].filter(el => window.getComputedStyle(el).backgroundImage === AD_LABEL_IMAGE),
-            ...document.querySelectorAll('img[src*="//i.namu.wiki/i/0XdKxuKE15s2nBXA5ONLGz5Im1evTbKAEp0l7qJ84bI.png"]'),
+            ...document.querySelectorAll('img[src*="//i.namu.wiki/i/0XdKxuKE15s2nBXA5ONLGz5Im1evTbKAEp0l7qJ84bI.png"], img[src*="//i.namu.wiki/i/0XdKxuKE15s2nBXA5ONLG66Mwng080K-LocLtYyl2nU.png"]'),
         ];
 
         for (const adLabel of adLabels) {
