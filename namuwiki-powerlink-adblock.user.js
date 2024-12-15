@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove powerlink advertise
 // @namespace    http://tampermonkey.net/
-// @version      202412150148
+// @version      202412150157
 // @description  Remove powerlink advertise
 // @author       hotswap
 // @match        https://namu.wiki/*
@@ -31,7 +31,7 @@
                     parentDiv.parentElement.remove();
                     break;
                 }
-                parentDiv = parentDiv.parentElement.closest('div');
+                parentDiv = parentDiv.parentElement?.closest('div');
             }
         }
     };
