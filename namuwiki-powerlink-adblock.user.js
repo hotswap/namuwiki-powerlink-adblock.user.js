@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove powerlink advertise
 // @namespace    http://tampermonkey.net/
-// @version      202412150157
+// @version      202412151705
 // @description  Remove powerlink advertise
 // @author       hotswap
 // @match        https://namu.wiki/*
@@ -37,7 +37,7 @@
     };
 
     const observer = new MutationObserver(hideAdvertise);
-    observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+    observer.observe(document.body, { childList: true, subtree: true, attributeFilter: ['src'] });
     
     window.onload = hideAdvertise;
     if (document.readyState === 'loading') {
