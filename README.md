@@ -1,0 +1,1 @@
+# namuwiki-powerlink-adblock.user.js
